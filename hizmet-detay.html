@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kıroğulları Mobilya | Hizmet Detay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="font-sans">
+<!-- Header -->
+<header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-lg">
+                    <rect width="40" height="40" rx="8" fill="url(#woodGradient)"/>
+                    <path d="M12 8L12 32M12 20L20 8M12 20L20 32" 
+                          stroke="white" 
+                          stroke-width="2.5" 
+                          stroke-linecap="round"/>
+                    <path d="M22 32L22 8L26 20L30 8L30 32" 
+                          stroke="white" 
+                          stroke-width="2.5" 
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="woodGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnPoints">
+                            <stop offset="0%" stop-color="#8B4513"/>
+                            <stop offset="50%" stop-color="#A0522D"/>
+                            <stop offset="100%" stop-color="#6B4423"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="text-2xl font-bold bg-gradient-to-r from-amber-800 to-yellow-900 bg-clip-text text-transparent">
+                    Kıroğulları Mobilya
+                </span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="index.html" class="px-4 py-2 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Anasayfa
+                </a>
+                <a href="kurumsal.html" class="px-4 py-2 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Kurumsal
+                </a>
+                <a href="hizmetler.html" class="px-4 py-2 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Hizmetler
+                </a>
+                <a href="blog-liste.html" class="px-4 py-2 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Blog
+                </a>
+                <a href="iletisim.html" class="ml-2 px-6 py-2 text-white bg-amber-800 rounded-lg hover:bg-amber-900 transition duration-200 shadow-sm hover:shadow">
+                    İletişim
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition duration-200" id="mobile-menu-button">
+                <i class="fas fa-bars text-xl text-gray-600"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden fixed top-[73px] left-0 right-0 bg-white/95 backdrop-blur-sm w-full px-4 sm:px-6 lg:px-8 border-b border-gray-100 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-2 py-4">
+                <a href="index.html" class="px-4 py-3 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Anasayfa
+                </a>
+                <a href="kurumsal.html" class="px-4 py-3 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Kurumsal
+                </a>
+                <a href="hizmetler.html" class="px-4 py-3 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Hizmetler
+                </a>
+                <a href="blog-liste.html" class="px-4 py-3 text-gray-700 hover:text-amber-800 rounded-lg hover:bg-amber-50 transition duration-200">
+                    Blog
+                </a>
+                <a href="iletisim.html" class="px-4 py-3 text-white bg-amber-800 rounded-lg hover:bg-amber-900 transition duration-200">
+                    İletişim
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Service Detail Content -->
+<section class="pt-24 pb-12">
+    <div class="container mx-auto px-4">
+        <div id="service-content">
+            <!-- İçerik JavaScript ile doldurulacak -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer aynı -->
+
+<script>
+    // URL'den hizmet parametresini al
+    const urlParams = new URLSearchParams(window.location.search);
+    const service = urlParams.get('service');
+
+    // Hizmet detayları
+    const serviceDetails = {
+        'mutfak': {
+            title: 'Mutfak Dolabı',
+            description: 'Modern ve fonksiyonel mutfak dolabı çözümleri ile mutfağınızı baştan yaratın. Ergonomik tasarımlar ve kaliteli malzemeler ile uzun ömürlü kullanım sağlayın.',
+            features: [
+                'Özel tasarım seçenekleri',
+                'Dayanıklı malzeme',
+                'Fonksiyonel çekmece sistemleri',
+                'Kolay temizlenebilir yüzeyler'
+            ],
+            benefits: [
+                'Maksimum depolama alanı',
+                'Ergonomik kullanım',
+                'Modern görünüm',
+                'Uzun ömürlü kullanım'
+            ],
+            materials: [
+                'Lake boya',
+                'MDF',
+                'Membran',
+                'Akrilik'
+            ],
+            gallery: [
+                'assets/images/mutfak1.webp',
+                'assets/images/mutfak2.webp',
+                'assets/images/mutfak3.webp'
+            ],
+            image: 'assets/images/homebanner1.webp'
+        },
+        'gardirop': {
+            title: 'Gardırop',
+            description: 'Geniş depolama alanına sahip modern gardırop çözümleri ile yatak odanızı düzenli ve şık tutun.',
+            features: [
+                'Özel bölmeler',
+                'LED aydınlatma',
+                'Sürgülü kapak seçeneği',
+                'Çeşitli renk alternatifleri'
+            ],
+            benefits: [
+                'Maksimum depolama kapasitesi',
+                'Şık ve modern tasarım',
+                'Kolay kullanım',
+                'Uzun ömürlü malzeme'
+            ],
+            materials: [
+                'MDF',
+                'Suntalam',
+                'Ayna',
+                'Alüminyum profil'
+            ],
+            gallery: [
+                'assets/images/gardirop1.webp',
+                'assets/images/gardirop2.webp',
+                'assets/images/gardirop3.webp'
+            ],
+            image: 'assets/images/gardirop.webp'
+        },
+        'cocuk-odasi': {
+            title: 'Çocuk Odası',
+            description: 'Renkli ve güvenli çocuk odası mobilyaları ile çocuğunuzun hayal gücünü destekleyin.',
+            features: [
+                'Güvenli malzeme kullanımı',
+                'Renkli tasarımlar',
+                'Pratik depolama çözümleri',
+                'Büyüyebilen mobilya seçenekleri'
+            ],
+            benefits: [
+                'Çocuğunuza özel tasarım',
+                'Güvenli kullanım',
+                'Uzun ömürlü çözümler',
+                'Fonksiyonel alanlar'
+            ],
+            materials: [
+                'E1 sınıfı MDF',
+                'Çocuk dostu boya',
+                'Yumuşak kapak sistemi',
+                'Anti-bakteriyel yüzey'
+            ],
+            gallery: [
+                'assets/images/cocuk1.webp',
+                'assets/images/cocuk2.webp',
+                'assets/images/cocuk3.webp'
+            ],
+            image: 'assets/images/cocuk-odasi.webp'
+        },
+        'gemi-yat': {
+            title: 'Gemi & Yat Mobilyası',
+            description: 'Deniz şartlarına uygun, özel tasarım gemi ve yat mobilyaları üretiyoruz.',
+            features: [
+                'Suya dayanıklı malzeme',
+                'Özel menteşe sistemleri',
+                'Kompakt tasarım',
+                'Deniz şartlarına uygun'
+            ],
+            benefits: [
+                'Uzun ömürlü kullanım',
+                'Özel üretim',
+                'Profesyonel montaj',
+                'Teknik destek'
+            ],
+            materials: [
+                'Marine kontrplak',
+                'Özel vernik',
+                'Paslanmaz çelik',
+                'Tik ağacı'
+            ],
+            gallery: [
+                'assets/images/gemi1.webp',
+                'assets/images/gemi2.webp',
+                'assets/images/gemi3.webp'
+            ],
+            image: 'assets/images/gemi-yat.webp'
+        },
+        'tv-unitesi': {
+            title: 'TV Ünitesi',
+            description: 'Modern ve fonksiyonel TV ünitesi tasarımları ile oturma odanızı şıklaştırın.',
+            features: [
+                'Kablo gizleme sistemi',
+                'Geniş depolama alanı',
+                'Modern tasarım',
+                'Özel ölçü seçeneği'
+            ],
+            benefits: [
+                'Düzenli görünüm',
+                'Kolay temizlik',
+                'Şık tasarım',
+                'Dayanıklı yapı'
+            ],
+            materials: [
+                'MDF',
+                'Lake boya',
+                'Cam',
+                'LED aydınlatma'
+            ],
+            gallery: [
+                'assets/images/tv1.webp',
+                'assets/images/tv2.webp',
+                'assets/images/tv3.webp'
+            ],
+            image: 'assets/images/tv-unit.webp'
+        },
+        'banyo': {
+            title: 'Banyo Dolabı',
+            description: 'Neme dayanıklı, modern banyo dolabı tasarımları ile banyonuzu yenileyin.',
+            features: [
+                'Neme dayanıklı malzeme',
+                'Modern tasarım',
+                'Fonksiyonel çekmeceler',
+                'Ayna seçenekleri'
+            ],
+            benefits: [
+                'Uzun ömürlü kullanım',
+                'Kolay temizlik',
+                'Şık görünüm',
+                'Maksimum depolama'
+            ],
+            materials: [
+                'Suya dayanıklı MDF',
+                'Özel kaplama',
+                'Ayna',
+                'Soft-close menteşe'
+            ],
+            gallery: [
+                'assets/images/banyo1.webp',
+                'assets/images/banyo2.webp',
+                'assets/images/banyo3.webp'
+            ],
+            image: 'assets/images/banyo-dolabi.webp'
+        }
+    };
+
+    // Seçilen hizmetin detaylarını göster
+    const serviceDetail = serviceDetails[service];
+    if (serviceDetail) {
+        document.getElementById('service-content').innerHTML = `
+            <!-- Ana Bölüm -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <img src="${serviceDetail.image}" alt="${serviceDetail.title}" 
+                         class="rounded-2xl shadow-xl w-full h-[500px] object-cover">
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold mb-6">${serviceDetail.title}</h1>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">${serviceDetail.description}</p>
+                    
+                    <h2 class="text-2xl font-semibold mb-4">Özellikler</h2>
+                    <ul class="space-y-3 mb-8">
+                        ${serviceDetail.features.map(feature => `
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-amber-800 mr-3"></i>
+                                <span class="text-gray-700">${feature}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+
+                    <div class="mt-8">
+                        <a href="iletisim.html" 
+                           class="bg-amber-800 text-white px-8 py-4 rounded-xl hover:bg-amber-900 transition duration-300 inline-flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Teklif Alın
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avantajlar ve Malzemeler Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Avantajlar -->
+                <div class="bg-amber-50/50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-amber-900">
+                        <i class="fas fa-star mr-2 text-amber-600"></i>
+                        Avantajlar
+                    </h3>
+                    <ul class="space-y-4">
+                        ${serviceDetail.benefits.map(benefit => `
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-3"></i>
+                                <span class="text-gray-700">${benefit}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+
+                <!-- Malzemeler -->
+                <div class="bg-amber-50/50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-amber-900">
+                        <i class="fas fa-tools mr-2 text-amber-600"></i>
+                        Kullanılan Malzemeler
+                    </h3>
+                    <ul class="space-y-4">
+                        ${serviceDetail.materials.map(material => `
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-amber-600 mr-3 text-xs"></i>
+                                <span class="text-gray-700">${material}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Galeri -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center">Örnek Çalışmalarımız</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    ${serviceDetail.gallery.map(img => `
+                        <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                            <img src="${img}" alt="Örnek Çalışma" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-gradient-to-r from-amber-800 to-yellow-900 rounded-2xl p-12 text-center text-white">
+                <h2 class="text-3xl font-bold mb-4">Projeniz İçin Bize Ulaşın</h2>
+                <p class="text-lg mb-8 opacity-90">
+                    Hayalinizdeki ${serviceDetail.title.toLowerCase()}nı birlikte tasarlayalım
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="iletisim.html" 
+                       class="px-8 py-4 bg-white text-amber-800 rounded-xl hover:bg-amber-50 transition duration-300 inline-flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        İletişime Geçin
+                    </a>
+                    <a href="tel:+905374379843" 
+                       class="px-8 py-4 bg-amber-900 text-white rounded-xl hover:bg-amber-950 transition duration-300 inline-flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        Hemen Arayın
+                    </a>
+                </div>
+            </div>
+        `;
+    } else {
+        // Hizmet bulunamadığında gösterilecek içerik
+        document.getElementById('service-content').innerHTML = `
+            <div class="text-center py-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Üzgünüz, aradığınız hizmet bulunamadı.</h2>
+                <p class="text-gray-600 mb-8">Lütfen hizmetler sayfasına dönüp geçerli bir hizmet seçin.</p>
+                <a href="hizmetler.html" class="inline-block px-6 py-3 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition duration-300">
+                    Hizmetlere Dön
+                </a>
+            </div>
+        `;
+    }
+</script>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16 w-full relative overflow-hidden">
+    <!-- Decorative blur effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-1/2 -right-1/4 w-96 h-96 bg-amber-500/10 rounded-full filter blur-3xl"></div>
+        <div class="absolute -bottom-1/2 -left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full filter blur-3xl"></div>
+    </div>
+
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+            <!-- Company Info -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center space-x-2 mb-6">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-lg">
+                        <rect width="40" height="40" rx="8" fill="url(#woodGradient)"/>
+                        <path d="M12 8L12 32M12 20L20 8M12 20L20 32" 
+                              stroke="white" 
+                              stroke-width="2.5" 
+                              stroke-linecap="round"/>
+                        <path d="M22 32L22 8L26 20L30 8L30 32" 
+                              stroke="white" 
+                              stroke-width="2.5" 
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="woodGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnPoints">
+                                <stop offset="0%" stop-color="#8B4513"/>
+                                <stop offset="50%" stop-color="#A0522D"/>
+                                <stop offset="100%" stop-color="#6B4423"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
+                            Kıroğulları Mobilya
+                        </span>
+                </div>
+                <p class="text-gray-400 mb-8 max-w-md">
+                    20 yıllık tecrübemizle kaliteli ve şık mobilya çözümleri sunuyoruz. Modern tasarımlar ve profesyonel hizmet anlayışıyla yanınızdayız.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-amber-900/30 rounded-lg flex items-center justify-center hover:bg-amber-800 transition duration-300">
+                        <i class="fab fa-facebook-f text-amber-400 hover:text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-amber-900/30 rounded-lg flex items-center justify-center hover:bg-amber-800 transition duration-300">
+                        <i class="fab fa-instagram text-amber-400 hover:text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-amber-900/30 rounded-lg flex items-center justify-center hover:bg-amber-800 transition duration-300">
+                        <i class="fab fa-twitter text-amber-400 hover:text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-white">Hızlı Bağlantılar</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="index.html" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>
+                            Anasayfa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="kurumsal.html" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>
+                            Kurumsal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hizmetler.html" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>
+                            Hizmetler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-liste.html" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="iletisim.html" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>
+                            İletişim
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-white">İletişim</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-3">
+                        <div class="mt-1">
+                            <i class="fas fa-map-marker-alt text-amber-400"></i>
+                        </div>
+                        <span class="text-gray-400">
+                                İçmeler, Ankara Cd. No:28, 34947 Tuzla/İstanbul
+                            </span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <div class="mt-1">
+                            <i class="fas fa-phone text-amber-400"></i>
+                        </div>
+                        <span class="text-gray-400">
+                                (0537) 437 98 43
+                            </span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <div class="mt-1">
+                            <i class="fas fa-envelope text-amber-400"></i>
+                        </div>
+                        <span class="text-gray-400">
+                                info@kirogullarimobilya.com
+                            </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-12 pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Kıroğulları Mobilya. Tüm hakları saklıdır.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">
+                        Gizlilik Politikası
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">
+                        Kullanım Şartları
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+
+                if (!mobileMenu.classList.contains('hidden')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            window.addEventListener('scroll', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html> 
